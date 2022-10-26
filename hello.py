@@ -76,7 +76,7 @@ def link_2_hello():
 
 @app.route('/hello')
 def hello():
-    return "<h1>Hello World!</p>"
+    return "<h1>Hello World!</h1>"
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=7700)
