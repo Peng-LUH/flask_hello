@@ -1,7 +1,14 @@
 FROM python:3.9.15-buster
+
 WORKDIR /flask_hello
+
 COPY requirements.txt requirements.txt
-RUN pip3 install --no-cache-dir -r requirements.txt
+
+RUN pip3 install -r requirements.txt
+
 COPY . .
+
 EXPOSE 7700
-CMD ["python3", "hello.py"]
+
+ENTRYPOINT [ "python3" ]
+CMD ["hello.py"]
